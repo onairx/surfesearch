@@ -1,0 +1,52 @@
+'use client'
+import React from "react";
+import DisplayResults from "../Display";
+import { useSearchParams } from "next/navigation";
+
+export default function News() {
+    const [webResults, setWebResults] = React.useState([])
+    const searchParams = useSearchParams();
+    const query = searchParams.get("q");
+    React.useEffect(() => {
+        async function fetchData() {
+            try {
+                const response = await fetch(`/api/webresults?q=${query}`)
+                const data = await response.json()
+                setWebResults(data.news.results)
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        fetchData()
+    }, [query])
+    const theResults = webResults?.map((results, index) => {
+        return (
+            <section key={index}>
+                <DisplayResults results={results} index={index} />
+            </section>
+
+
+        )
+    })
+    return (
+
+        <section className="w-screen h-full md:px-32 px-2 pb-10">
+            <div className="p-5">
+                <h1>Results for search "{query}"</h1>
+            </div>
+            <div className="flex flex-col gap-2">
+                {theResults}
+            </div>
+
+            {
+                theResults?.length === 0 &&
+                < div className="w-full h-full flex justify-centert items-start py-20 px-5 text-5xl font-bold text-[#0a0a0a]
+                flex-col gap-3">
+                    Loading...
+
+                    <span className="text-sm font-normal text-[#727272]">Or News not available currently 😅</span>
+                </div>
+            }
+        </section >
+    )
+}

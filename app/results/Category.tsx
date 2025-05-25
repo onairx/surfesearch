@@ -1,0 +1,31 @@
+import React from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+
+export default function Category() {
+    const pathname = usePathname();
+    const searchParams = useSearchParams();
+    const category = searchParams.get('q')
+    return (
+        <div className="w-full h-auto  flex items-center md:px-34 px-2 pb-3 gap-5 border-b border-[#c9c9c9]">
+            <Link
+                href={`../results/web?q=${category}`}
+                className={pathname.includes('web') ? 'webcat' : 'nonwebcat'}>
+                <button className="cursor-pointer">Web results</button>
+            </Link>
+            <Link
+                href={`../results/news?q=${category}`}
+                className={pathname.includes('news') ? 'webcat' : 'nonwebcat'}>
+                <button className="cursor-pointer">News</button>
+
+            </Link>
+            <Link
+                href={`../results/videos?q=${category}`}
+                className={pathname.includes('videos') ? 'webcat' : 'nonwebcat'}
+            >
+                <button className="cursor-pointer">Videos</button>
+            </Link>
+        </div>
+    )
+}

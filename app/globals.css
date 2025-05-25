@@ -14,8 +14,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #f4f1de;
+    --foreground: #0a0a0a;
   }
 }
 
@@ -23,4 +23,33 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .hoverbutton {
+    @apply px-5 py-2 border rounded-md cursor-pointer backdrop-blur-2xl;
+  }
+
+  .defaulttextcolor {
+    @apply text-5xl font-bold text-transparent bg-gradient-to-r from-[#FF7E9F] to-[#0051C3]
+    bg-clip-text;
+  }
+  .backgroundchangetextcolor {
+    @apply text-5xl font-bold text-[#ffffff] mix-blend-difference;
+  }
+  .crumbandcave {
+    @apply p-2 border rounded-lg px-5 cursor-pointer backdrop-blur-2xl;
+  }
+  .crumbandcavetextcolorone {
+    @apply text-transparent bg-gradient-to-r from-[#FF7E9F] to-[#0051C3] bg-clip-text cursor-pointer;
+  }
+  .crumbandcavetextcolortwo {
+    @apply text-transparent bg-gradient-to-r from-[#02AE16] to-[#000000] bg-clip-text cursor-pointer;
+  }
+  .webcat {
+    @apply px-2 py-1  cursor-pointer text-[#0a0a0a] border-b-3 border-[#0051C3] font-normal;
+  }
+  .nonwebcat {
+    @apply px-2 py-1  cursor-pointer text-[#646464] font-normal;
+  }
 }
