@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 
-export default function Category() {
+function TheCategory() {
     const pathname = usePathname();
     const searchParams = useSearchParams();
     const category = searchParams.get('q')
@@ -27,5 +27,18 @@ export default function Category() {
                 <button className="cursor-pointer">Videos</button>
             </Link>
         </div>
+    )
+}
+export default function Category() {
+    return (
+        <Suspense
+            fallback={
+                <div className="w-full h-full flex justify-start items-center py-20 px-5 text-5xl font-bold text-[#0a0a0a]">
+                    Loading..
+                </div>
+            }
+        >
+            <TheCategory />
+        </Suspense>
     )
 }
