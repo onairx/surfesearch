@@ -32,7 +32,7 @@ export default function News() {
 
         <section className="w-screen h-full md:px-32 px-2 pb-10">
             <div className="p-5">
-                <h1>Results for search "{query}"</h1>
+                <h1>Results for search <span className="font-bold">{query}</span></h1>
             </div>
             <div className="flex flex-col gap-2">
                 {theResults}

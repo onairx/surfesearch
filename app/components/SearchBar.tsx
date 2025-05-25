@@ -3,16 +3,15 @@ import Image from "next/image";
 import SeachIcon from "@/public/assets/search-icon.svg"
 import SearchIconWhite from "@/public/assets/searc-icon-white.svg"
 import { useRouter } from "next/navigation";
-import { useSearchParams } from "next/navigation";
+
+interface Suggestion {
+    query: string;
+}
 
 export default function SearchBar({ showIcon }: { showIcon: boolean }) {
-    const searchParams = useSearchParams()
-    const theSearchParam = searchParams.get('q')
-    const [settingSearch, setSettingSearch] = React.useState(theSearchParam)
-
     const router = useRouter()
     const [search, setSearch] = React.useState("")
-    const [showSuggetion, setShowSuggetion] = React.useState([])
+    const [showSuggetion, setShowSuggetion] = React.useState<Suggestion[]>([]);
     React.useEffect(() => {
         async function getSuggetions() {
             try {
@@ -41,7 +40,7 @@ export default function SearchBar({ showIcon }: { showIcon: boolean }) {
         setSearch("")
     }
 
-    const showSuggetionList = showSuggetion?.map((item: any, index: number) => {
+    const showSuggetionList = showSuggetion?.map((item, index) => {
         return (
             <div key={index} className="cursor-default" onClick={() => handleSuggetion(item.query)}>
                 <p className={`${showIcon ? 'hover:bg-[#504f4f8e]' : 'hover:bg-[#e8e8e8]'} rounded-sm p-1 transition-all duration-100 ease-in-out`}>{item.query}</p>
@@ -68,7 +67,7 @@ export default function SearchBar({ showIcon }: { showIcon: boolean }) {
                     name="search"
                     className="px-2 md:text-[1.5em] text-lg focus:outline-none w-full h-full 
                     rounded-2xl cursor-text placeholder:text-[#D1D1D1] font-medium"
-                    placeholder={"enter your search"}
+                    placeholder="enter your search"
                     onChange={(e) => setSearch(e.target.value)}
                 />
                 <button className="h-full md:px-7 px-4 md:rounded-xl rounded-lg bg-[#0051C3] text-[1.1em] text-[#f7f7f7] cursor-pointer">

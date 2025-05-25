@@ -31,7 +31,7 @@ export default function Videos() {
     return (
         <section className="w-screen h-full md:px-32 px-2 pb-10">
             <div className="md:p-5 p-2">
-                <h1>Results for search "{query}"</h1>
+                <h1>Results for search <span className="font-bold">{query}</span></h1>
             </div>
             {
                 theResults &&

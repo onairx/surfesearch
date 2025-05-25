@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Main() {
     const [showIcon, setShowIcon] = React.useState<boolean>(false)
     const [showImage, setShowImage] = React.useState<boolean>(false)
-    const [imageData, setImageData] = React.useState<any>(null)
+    const [imageData, setImageData] = React.useState<string | null>(null)
 
     React.useEffect(() => {
         const storedImage = localStorage.getItem('backgroundImage');
