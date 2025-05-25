@@ -1,9 +1,9 @@
 'use client'
-import React from "react";
+import React, { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import DisplayResults from "../Display";
 
-export default function Videos() {
+function VideosResults() {
     const [webResults, setWebResults] = React.useState([])
     const searchParams = useSearchParams();
     const query = searchParams.get("q");
@@ -39,15 +39,21 @@ export default function Videos() {
                     {theResults}
                 </div>
             }
-
-            {
-                theResults?.length < 0 &&
+        </section >
+    )
+}
+export default function Videos() {
+    return (
+        <Suspense
+            fallback={
                 < div className="w-full h-full flex justify-centert items-start py-20 px-5 text-5xl font-bold text-[#0a0a0a]
                 flex-col gap-3">
                     Loading...
                     <span className="text-sm font-normal text-[#727272]">Or Videos not available currently 😅</span>
                 </div>
             }
-        </section >
+        >
+            <VideosResults />
+        </Suspense>
     )
 }

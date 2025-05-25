@@ -1,10 +1,10 @@
 'use client'
-import React from "react";
+import React, { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import DisplayResults from "../Display";
 
 
-export default function Results() {
+function WebResults() {
     const [webResults, setWebResults] = React.useState([])
     const searchParams = useSearchParams();
     const query = searchParams.get("q");
@@ -42,12 +42,20 @@ export default function Results() {
                     {theResults}
                 </div>
             }
-            {
-                theResults?.length === 0 &&
+
+        </section>
+    )
+}
+export default function Results() {
+    return (
+        <Suspense
+            fallback={
                 <div className="w-full h-full flex justify-start items-center py-20 px-5 text-5xl font-bold text-[#0a0a0a]">
                     Loading..
                 </div>
             }
-        </section>
+        >
+            <WebResults />
+        </Suspense>
     )
 }

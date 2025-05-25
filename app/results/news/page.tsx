@@ -37,23 +37,21 @@ function NewsComponent() {
             <div className="flex flex-col gap-2">
                 {theResults}
             </div>
-
-            {
-                theResults?.length === 0 &&
-                < div className="w-full h-full flex justify-centert items-start py-20 px-5 text-5xl font-bold text-[#0a0a0a]
-                flex-col gap-3">
-                    Loading...
-
-                    <span className="text-sm font-normal text-[#727272]">Or News not available currently 😅</span>
-                </div>
-            }
         </section >
     )
 }
 
 export default function News() {
     return (
-        <Suspense>
+        <Suspense
+            fallback={
+                < div className="w-full h-full flex justify-centert items-start py-20 px-5 text-5xl font-bold text-[#0a0a0a]
+                    flex-col gap-3">
+                    Loading...
+                    <span className="text-sm font-normal text-[#727272]">Or News not available currently 😅</span>
+                </div>
+            }
+        >
             <NewsComponent />
         </Suspense>
     )
