@@ -62,7 +62,7 @@ export default function Main() {
                     </Link>
                     <Link href="./crave">
                         <div className={`${showImage ? 'bg-[#0a0a0a99] border-[#696969]' : 'bg-[#ffffff99] border-[#C9C9C9] '} crumbandcave`}>
-                            <button className={showImage ? 'text-white' : 'crumbandcavetextcolortwo flex gap-1'}>
+                            <button className={`${showImage ? 'text-white' : 'crumbandcavetextcolortwo'} flex gap-1`}>
                                 <span className="sm:block hidden">Search recipe by</span>Crave
                             </button>
                         </div>
