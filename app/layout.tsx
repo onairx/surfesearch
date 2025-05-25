@@ -17,7 +17,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: "Surfe",
-  description: "Search the web for anything",
+  description: "Search the web with ease",
 };
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {

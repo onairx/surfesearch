@@ -3,14 +3,14 @@ import { IoMdSettings } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 
 
+interface FooterProps {
+    switchIcon: () => void;
+    showIcon: boolean;
+    showBackground: () => void;
+    hideBackground: () => void;
+}
 
-export default function Footer({ switchIcon, showIcon, showBackground, hideBackground }:
-    {
-        switchIcon: () => void,
-        showIcon: boolean,
-        showBackground: () => void,
-        hideBackground: () => void,
-    }) {
+export default function Footer({ switchIcon, showIcon, showBackground, hideBackground }: FooterProps) {
     function theSwitch() {
         hideBackground()
         switchIcon()
