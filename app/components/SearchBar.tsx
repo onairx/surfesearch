@@ -65,8 +65,7 @@ export default function SearchBar({ showIcon }: { showIcon: boolean }) {
                 <input
                     type="text"
                     name="search"
-                    className="px-2 md:text-[1.5em] text-lg focus:outline-none w-full h-full 
-                    rounded-2xl cursor-text placeholder:text-[#D1D1D1] font-medium"
+                    className={showIcon ? 'placeholder:text-[#d1d1d13b] theplaceholder' : 'placeholder:text-[#d1d1d1] theplaceholder'}
                     placeholder="enter your search"
                     onChange={(e) => setSearch(e.target.value)}
                 />
