@@ -4,7 +4,7 @@ import { useSearchParams } from "next/navigation";
 import DisplayResults from "../Display";
 
 
-function WebResults() {
+function Search() {
     const [webResults, setWebResults] = React.useState([])
     const searchParams = useSearchParams();
     const query = searchParams.get("q");
@@ -53,7 +53,7 @@ function WebResults() {
         </section>
     )
 }
-export default function Results() {
+export default function Page() {
     return (
         <Suspense
             fallback={
@@ -62,7 +62,7 @@ export default function Results() {
                 </div>
             }
         >
-            <WebResults />
+            <Search />
         </Suspense>
     )
 }

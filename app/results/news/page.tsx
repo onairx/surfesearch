@@ -3,7 +3,7 @@ import React, { Suspense } from "react";
 import DisplayResults from "../Display";
 import { useSearchParams } from "next/navigation";
 
-function NewsComponent() {
+function Search() {
     const [webResults, setWebResults] = React.useState([])
     const searchParams = useSearchParams();
     const query = searchParams.get("q");
@@ -50,7 +50,7 @@ function NewsComponent() {
     )
 }
 
-export default function News() {
+export default function Page() {
     return (
         <Suspense
             fallback={
@@ -60,7 +60,7 @@ export default function News() {
                 </div>
             }
         >
-            <NewsComponent />
+            <Search />
         </Suspense>
     )
 
