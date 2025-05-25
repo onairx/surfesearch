@@ -42,6 +42,13 @@ function WebResults() {
                     {theResults}
                 </div>
             }
+            {
+                theResults?.length === 0 &&
+                < div className="w-full h-full flex justify-centert items-start py-20 px-5 text-5xl font-bold text-[#0a0a0a]
+                flex-col gap-3">
+                    Loading...
+                </div>
+            }
 
         </section>
     )
