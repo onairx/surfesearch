@@ -1,9 +1,9 @@
 'use client'
-import React from "react";
+import React, { Suspense } from "react";
 import DisplayResults from "../Display";
 import { useSearchParams } from "next/navigation";
 
-export default function News() {
+function NewsComponent() {
     const [webResults, setWebResults] = React.useState([])
     const searchParams = useSearchParams();
     const query = searchParams.get("q");
@@ -49,4 +49,13 @@ export default function News() {
             }
         </section >
     )
+}
+
+export default function News() {
+    return (
+        <Suspense>
+            <NewsComponent />
+        </Suspense>
+    )
+
 }
