@@ -55,14 +55,14 @@ export default function Main() {
                 <div className="flex justify-center items-center w-full h-auto gap-5">
                     <Link href="https://crumbs-seven.vercel.app" target="_blank">
                         <div className={`${showImage ? 'bg-[#0a0a0a99] border-[#696969]' : 'bg-[#ffffff99] border-[#C9C9C9] '} crumbandcave`}>
-                            <button className={`${showImage ? 'text-white' : 'crumbandcavetextcolorone'} flex gap-1`}>
+                            <button className={`${showImage ? 'text-white' : 'crumbandcavetextcolorone'} flex gap-1 cursor-pointer`}>
                                 <span className="sm:block hidden">Search movies by</span>Crumbs
                             </button>
                         </div>
                     </Link>
                     <Link href="./crave">
                         <div className={`${showImage ? 'bg-[#0a0a0a99] border-[#696969]' : 'bg-[#ffffff99] border-[#C9C9C9] '} crumbandcave`}>
-                            <button className={`${showImage ? 'text-white' : 'crumbandcavetextcolortwo'} flex gap-1`}>
+                            <button className={`${showImage ? 'text-white' : 'crumbandcavetextcolortwo'} flex gap-1 cursor-pointer`}>
                                 <span className="sm:block hidden">Search recipe by</span>Crave
                             </button>
                         </div>
