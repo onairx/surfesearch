@@ -50,12 +50,12 @@ export default function SearchBar({ showIcon }: { showIcon: boolean }) {
     return (
         <div className={`relative rounded-2xl
             ${showIcon ? 'bg-[#0a0a0a99] border-[#696969] text-[#ffffff]' :
-                'bg-[#ffffff99] border-[#C9C9C9] text-[#0a0a0a]'}`}>
+                'bg-[#ffffff] border-[#C9C9C9] text-[#0a0a0a]'}`}>
             <form
                 className={`${showIcon ? 'bg-[#0a0a0a99] border-[#202020] text-[#ffffff]' :
-                    'bg-[#ffffff99] border-[#C9C9C9] text-[#0a0a0a]'} border shadow-lg md:rounded-2xl 
+                    'bg-[#f1f1f1] border-[#ffffff] text-[#0a0a0a]'} border shadow-lg md:rounded-2xl 
                      overflow-clip backdrop-blur-2xl rounded-xl
-                    lg:w-[50vw] md:w-[75vw] w-[95vw] h-15 focus:outline-none p-1 text-sm flex
+                    lg:w-[50vw] md:w-[85vw] w-[95vw] h-15 focus:outline-none p-1 text-sm flex
                     items-center gap-2 justify-evenly`}
                 action={theData}
             >
@@ -65,11 +65,13 @@ export default function SearchBar({ showIcon }: { showIcon: boolean }) {
                 <input
                     type="text"
                     name="search"
-                    className={showIcon ? 'placeholder:text-[#d1d1d13b] theplaceholder' : 'placeholder:text-[#d1d1d1] theplaceholder'}
+                    className={showIcon ? 'placeholder:text-[#d1d1d13b] theplaceholder' : 'placeholder:text-[#b0b0b0] theplaceholder'}
                     placeholder="enter your search"
                     onChange={(e) => setSearch(e.target.value)}
                 />
-                <button className="h-full md:px-7 px-4 md:rounded-xl rounded-lg bg-[#0051C3] text-[1.1em] text-[#f7f7f7] cursor-pointer">
+                <button className={`${showIcon ? 'bg-[#0f448d] hover:bg-[#0f438dc5] transition-all duration-300 ease-in-out' :
+                    'bg-[#181C6A] hover:bg-[#0a0a0a] transition-all duration-300 ease-in-out'} 
+                h-full md:px-7 px-4 md:rounded-xl rounded-lg text-[1.1em] text-[#f7f7f7] cursor-pointer`}>
                     <span className="hidden md:block">Search</span>
                     <Image src={SearchIconWhite} alt="search-icon" className="w-5 h-auto md:hidden" />
                 </button>
