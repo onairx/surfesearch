@@ -29,7 +29,6 @@ body {
   .hoverbutton {
     @apply px-5 py-2 border rounded-md cursor-pointer backdrop-blur-2xl;
   }
-
   .defaulttextcolor {
     @apply text-5xl font-bold text-[#0a0a0a];
   }

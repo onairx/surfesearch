@@ -43,7 +43,11 @@ export default function SearchBar({ showIcon }: { showIcon: boolean }) {
     const showSuggetionList = showSuggetion?.map((item, index) => {
         return (
             <div key={index} className="cursor-default" onClick={() => handleSuggetion(item.query)}>
-                <p className={`${showIcon ? 'hover:bg-[#504f4f8e]' : 'hover:bg-[#e8e8e8]'} rounded-sm p-1 transition-all duration-100 ease-in-out`}>{item.query}</p>
+                <p className={`${showIcon ? 'hover:bg-[#504f4f8e] thetransition' : 'hover:bg-[#ffffff] thetransition'} 
+                    rounded-lg md:px-10 px-2 py-1`}
+                >
+                    {item.query}
+                </p>
             </div>
         )
     })
@@ -77,9 +81,9 @@ export default function SearchBar({ showIcon }: { showIcon: boolean }) {
                 </button>
 
             </form>
-            {showSuggetionList && showSuggetionList.length > 0 && <div className={`w-full h-fit md:px-10 px-2 absolute top-16 rounded-2xl
-                flex flex-col gap-2 py-2 ${showIcon ? 'bg-[#0a0a0a] border-[#696969] border text-[#ffffff]' :
-                    'bg-[#ffffff99] border-[#C9C9C9] border text-[#0a0a0a] backdrop-blur-2xl'} shadow-lg `}>
+            {showSuggetionList && showSuggetionList.length > 0 && <div className={`w-full h-fit absolute top-16 rounded-2xl p-2
+                flex flex-col gap-2 py-2 ${showIcon ? 'bg-[#0a0a0a] border-[#696969] border text-[#ffffff] backdrop-blur-2xl' :
+                    'bg-[#f1f1f1] border-[#C9C9C9] border text-[#0a0a0a] backdrop-blur-2xl'} shadow-lg `}>
                 {showSuggetionList}
             </div>}
         </div>
