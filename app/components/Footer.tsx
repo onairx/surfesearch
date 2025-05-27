@@ -36,13 +36,13 @@ export default function Footer({ switchIcon, showIcon, showBackground, hideBackg
                 {showIcon && <div className="absolute right-0 bottom-16 h-auto w-50 flex flex-col justify-end gap-1 backdrop-blur-2xl 
                     z-20">
 
-                    <button className={`${showIcon ? 'bg-[#0a0a0a] border-[#696969] text-white' : 'bg-[#ffffff99] border-[#C9C9C9]'} 
+                    <button className={`${showIcon ? 'bg-[#0a0a0a] border-[#202020] text-white' : 'bg-[#ffffff99] border-[#C9C9C9]'} 
                         hoverbutton select-none`}
                         onClick={showBackground}
                     >
                         Change Background
                     </button>
-                    <button className={`${showIcon ? 'bg-[#0a0a0a] border-[#696969] text-white' : 'bg-[#ffffff99] border-[#C9C9C9]'}
+                    <button className={`${showIcon ? 'bg-[#0a0a0a] border-[#202020] text-white' : 'bg-[#ffffff99] border-[#C9C9C9]'}
                         hoverbutton select-none`}
                         onClick={theSwitch}
                     >

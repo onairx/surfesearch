@@ -41,7 +41,7 @@ function Search() {
             }
             {
                 theResults?.length === 0 &&
-                < div className="w-full h-full flex justify-centert items-start py-20 px-5 text-5xl font-bold text-[#0a0a0a]
+                < div className="w-full h-full flex justify-centert items-start py-20 px-5 text-5xl font-bold text-[#565656]
                 flex-col gap-3">
                     Loading...
 
@@ -55,7 +55,7 @@ export default function Page() {
     return (
         <Suspense
             fallback={
-                < div className="w-full h-full flex justify-centert items-start py-20 px-5 text-5xl font-bold text-[#0a0a0a]
+                < div className="w-full h-full flex justify-centert items-start py-20 px-5 text-5xl font-bold text-[#565656]
                 flex-col gap-3">
                     Loading...
                     <span className="text-sm font-normal text-[#727272]">Or Videos not available currently 😅</span>

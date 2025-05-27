@@ -52,7 +52,7 @@ export default function SearchBar({ showIcon }: { showIcon: boolean }) {
             ${showIcon ? 'bg-[#0a0a0a99] border-[#696969] text-[#ffffff]' :
                 'bg-[#ffffff99] border-[#C9C9C9] text-[#0a0a0a]'}`}>
             <form
-                className={`${showIcon ? 'bg-[#0a0a0a99] border-[#696969] text-[#ffffff]' :
+                className={`${showIcon ? 'bg-[#0a0a0a99] border-[#202020] text-[#ffffff]' :
                     'bg-[#ffffff99] border-[#C9C9C9] text-[#0a0a0a]'} border shadow-lg md:rounded-2xl 
                      overflow-clip backdrop-blur-2xl rounded-xl
                     lg:w-[50vw] md:w-[75vw] w-[95vw] h-15 focus:outline-none p-1 text-sm flex

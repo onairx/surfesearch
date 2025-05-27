@@ -32,8 +32,8 @@ function Search() {
 
     return (
 
-        <section className="w-screen h-full md:px-32 p-2 pb-10">
-            <div className="md:p-5 p-2">
+        <section className="w-screen h-full md:px-32 p-2 pb-10 ">
+            <div className="md:p-5 p-2 text-[#b2b2b2]">
                 <h1>Results for search <span className="font-bold">{query}</span></h1>
             </div>
             {
@@ -44,7 +44,7 @@ function Search() {
             }
             {
                 theResults?.length === 0 &&
-                < div className="w-full h-full flex justify-centert items-start py-20 px-5 text-5xl font-bold text-[#0a0a0a]
+                < div className="w-full h-full flex justify-centert items-start py-20 px-5 text-5xl font-bold text-[#565656]
                 flex-col gap-3">
                     Loading...
                 </div>
@@ -57,7 +57,7 @@ export default function Page() {
     return (
         <Suspense
             fallback={
-                <div className="w-full h-full flex justify-start items-center py-20 px-5 text-5xl font-bold text-[#0a0a0a]">
+                <div className="w-full h-full flex justify-start items-center py-20 px-5 text-5xl font-bold text-[#565656]">
                     Loading..
                 </div>
             }

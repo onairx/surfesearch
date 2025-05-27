@@ -48,7 +48,7 @@ export default function DisplayResults({ results, index }: ResultListProps) {
 
 
     return (
-        <div key={index} className="lg:w-[60vw] md:w-[80vw] w-full h-auto border bg-[#f7f7f7] md:p-5 p-2 rounded-2xl border-[#c9c9c9]
+        <div key={index} className="lg:w-[60vw] md:w-[80vw] w-full h-auto border bg-[#111111] md:p-5 p-2 rounded-2xl border-[#202020]
             flex flex-col justify-center items-start gap-2 overflow-clip">
             <a
                 href=
@@ -61,7 +61,7 @@ export default function DisplayResults({ results, index }: ResultListProps) {
                 rel="noopener noreferrer"
             >
                 <div className="flex items-center gap-2">
-                    <div className="w-7 h-7 rounded-md bg-[#eaeaea] flex justify-center items-center">
+                    <div className="w-7 h-7 rounded-md bg-[#000000] border border-[#202020] flex justify-center items-center">
                         <img
                             src={
                                 results?.profile?.img ?
@@ -77,14 +77,14 @@ export default function DisplayResults({ results, index }: ResultListProps) {
                         />
                     </div>
                     <div className="flex flex-col justify-center overflow-clip md:w-[50vw] w-full gap-0">
-                        <p className="m-0 text-md font-normal leading-tight">
+                        <p className="m-0 text-md font-normal leading-tight text-[#b2b2b2]">
                             {
                                 (results?.profile?.name) ?
                                     results?.profile.name :
                                     results?.video?.creator
                             }
                         </p>
-                        <p className="text-[#7b7b7b] m-0 text-[0.8em] leading-tight">
+                        <p className="text-[#505050] m-0 text-[0.8em] leading-tight">
                             {
                                 results.profile?.url?.includes('http')
                                     ? results.profile.url
@@ -101,9 +101,9 @@ export default function DisplayResults({ results, index }: ResultListProps) {
                         : results.url
                 }
                 target="_blank" rel="noopener noreferrer">
-                <h1 className="text-[#0044c3] text-lg hover:underline">{results?.title}</h1>
+                <h1 className="text-[#83aefd] text-lg hover:underline">{results?.title}</h1>
             </a>
-            <p className="text-[#222222] text-sm">
+            <p className="text-[#b2b2b2] text-sm">
                 {results?.age && <span className="font-normal">{results?.age} - </span>}
                 {stripHtmlAndDecode(results?.description)}
             </p>

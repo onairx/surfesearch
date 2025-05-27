@@ -43,7 +43,9 @@ export default function Main() {
 
     }
     return (
-        <section className="w-full h-screen overflow-clip flex flex-col justify-between items-center" style={backgroundNoice}>
+        <section className="w-full h-screen overflow-clip flex flex-col justify-between items-center
+        bg-[#f4f1de]"
+            style={backgroundNoice}>
             <div className="flex flex-col justify-center items-center w-full h-full gap-5 md:p-5 p-2 mb-20">
                 <div className="flex flex-col justify-center items-center w-full h-auto text-center pointer-events-none">
                     <h1 className={showImage ? `backgroundchangetextcolor` : `defaulttextcolor`}
