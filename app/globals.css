@@ -45,10 +45,10 @@ body {
     @apply text-transparent bg-gradient-to-r from-[#02AE16] to-[#000000] bg-clip-text cursor-pointer;
   }
   .webcat {
-    @apply px-2 py-1  cursor-pointer text-[#b2b2b2] border-b-3 border-[#0051C3] font-normal;
+    @apply px-2 py-1  cursor-pointer text-[#e0e0e0] border-b-3 border-[#0051C3] font-normal;
   }
   .nonwebcat {
-    @apply px-2 py-1  cursor-pointer text-[#646464] font-normal;
+    @apply px-2 py-1  cursor-pointer text-[#747474] font-normal;
   }
   .theplaceholder {
     @apply px-2 md:text-[1.5em] text-sm focus:outline-none w-full h-full 

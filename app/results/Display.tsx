@@ -48,7 +48,7 @@ export default function DisplayResults({ results, index }: ResultListProps) {
 
 
     return (
-        <div key={index} className="lg:w-[60vw] md:w-[80vw] w-full h-auto border bg-[#111111] md:p-5 p-2 rounded-2xl border-[#202020]
+        <div key={index} className="lg:w-[60vw] md:w-[80vw] w-full h-auto border md:p-5 p-2 rounded-2xl bg-[#191919] border-[#2b2b2b]
             flex flex-col justify-center items-start gap-2 overflow-clip">
             <a
                 href=
@@ -77,7 +77,7 @@ export default function DisplayResults({ results, index }: ResultListProps) {
                         />
                     </div>
                     <div className="flex flex-col justify-center overflow-clip md:w-[50vw] w-full gap-0">
-                        <p className="m-0 text-md font-normal leading-tight text-[#b2b2b2]">
+                        <p className="m-0 text-md font-normal leading-tight text-[#e0e0e0]">
                             {
                                 (results?.profile?.name) ?
                                     results?.profile.name :
@@ -103,7 +103,7 @@ export default function DisplayResults({ results, index }: ResultListProps) {
                 target="_blank" rel="noopener noreferrer">
                 <h1 className="text-[#83aefd] text-lg hover:underline">{results?.title}</h1>
             </a>
-            <p className="text-[#b2b2b2] text-sm">
+            <p className="text-[#e0e0e0] text-sm">
                 {results?.age && <span className="font-normal">{results?.age} - </span>}
                 {stripHtmlAndDecode(results?.description)}
             </p>

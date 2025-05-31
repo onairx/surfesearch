@@ -8,7 +8,7 @@ function TheCategory() {
     const searchParams = useSearchParams();
     const category = searchParams.get('q')
     return (
-        <div className="w-full h-auto  flex items-center md:px-34 px-2 pb-3 gap-5 border-b border-[#202020] bg-[#111111]">
+        <div className="w-full h-auto  flex items-center md:px-34 px-2 pb-3 gap-5 border-b bg-[#191919] border-[#2b2b2b]">
             <Link
                 href={`../results/web?q=${category}`}
                 className={pathname.includes('web') ? 'webcat' : 'nonwebcat'}>

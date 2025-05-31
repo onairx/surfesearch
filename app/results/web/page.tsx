@@ -33,7 +33,7 @@ function Search() {
     return (
 
         <section className="w-screen h-full md:px-32 p-2 pb-10 ">
-            <div className="md:p-5 p-2 text-[#b2b2b2]">
+            <div className="md:p-5 p-2 text-[#e0e0e0]">
                 <h1>Results for search <span className="font-bold">{query}</span></h1>
             </div>
             {
