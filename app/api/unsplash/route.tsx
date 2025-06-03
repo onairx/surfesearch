@@ -10,7 +10,7 @@ export async function GET() {
             }
         })
         const data = await response.json()
-        return NextResponse.json(data.urls.full)
+        return NextResponse.json(data)
     } catch (error) {
         console.log(error)
     }

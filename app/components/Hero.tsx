@@ -72,11 +72,10 @@ export default function Main() {
             <div className="flex justify-center items-center w-full h-auto gap-5">
               <Link href="https://crumbs-seven.vercel.app" target="_blank">
                 <div
-                  className={`${
-                    showImage
-                      ? "bg-[#0a0a0a99] border-[#696969] hover:bg-[#0a0a0a55] thetransition"
-                      : "bg-[#0d0d0d2a] border-[#C8C8C8] hover:bg-[#5757572a] thetransition"
-                  } crumbandcave`}
+                  className={`${showImage
+                    ? "bg-[#0a0a0a99] border-[#696969] hover:bg-[#0a0a0a55] thetransition"
+                    : "bg-[#0d0d0d2a] border-[#C8C8C8] hover:bg-[#5757572a] thetransition"
+                    } crumbandcave`}
                 >
                   <button
                     className={`${showImage ? "text-white" : "text-white"} flex gap-1 cursor-pointer`}
@@ -88,11 +87,10 @@ export default function Main() {
               </Link>
               <Link href="./crave">
                 <div
-                  className={`${
-                    showImage
-                      ? "bg-[#0a0a0a99] border-[#696969] hover:bg-[#0a0a0a55] thetransition"
-                      : "bg-[#0d0d0d2a] border-[#C8C8C8] hover:bg-[#5757572a] thetransition"
-                  } crumbandcave`}
+                  className={`${showImage
+                    ? "bg-[#0a0a0a99] border-[#696969] hover:bg-[#0a0a0a55] thetransition"
+                    : "bg-[#0d0d0d2a] border-[#C8C8C8] hover:bg-[#5757572a] thetransition"
+                    } crumbandcave`}
                 >
                   <button
                     className={`${showImage ? "text-white" : "text-white"} flex gap-1 cursor-pointer`}
@@ -109,11 +107,10 @@ export default function Main() {
           </div>
         </div>
         <div
-          className={`${
-            showImage
-              ? "bg-[#0a0a0a99] border-[#a9a9a923] border-t backdrop-blur-2xl "
-              : "bg-transparent"
-          } w-full`}
+          className={`${showImage
+            ? "bg-[#0a0a0a99] border-[#a9a9a923] border-t backdrop-blur-2xl "
+            : "bg-transparent"
+            } w-full`}
         >
           <Footer
             switchIcon={switchIcon}
